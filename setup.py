@@ -30,13 +30,13 @@ def read(fname):
     return open(path.join(here, fname), encoding='utf-8').read()
 
 setup(
-    name='python3-w3id',
+    name='aiohttp_w3id',
     version='0.1.0',
     author='Justinas V. Daugmaudis',
     author_email='justinas@lt.ibm.com',
     description='w3id authentication middleware plugin for aiohttp',
     long_description=read('README.md'),
-    url='https://github.com/justinas-vd/python3-w3id',
+    url='https://github.com/justinas-vd/aiohttp_w3id',
     license='Apache-2.0',
     packages=['w3id', 'w3id.oauth2'],
     platforms=['any'],
