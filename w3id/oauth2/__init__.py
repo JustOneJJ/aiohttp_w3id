@@ -18,6 +18,8 @@ import json
 
 from aiohttp import web
 
+from distutils.util import strtobool
+
 from .decorators import login_required
 from .auth import oauth2_middleware, get_oauth2
 from .session_auth import SessionOAuth2Authentication
@@ -60,7 +62,7 @@ def expandvars(path, environ, start_pos=0):
 
 def create_policy(config, certificate=None):
     "Create default OAuth2 login policy."
-    if os.getenv('DISABLE_W3ID_LOGIN_FOR_LOCALHOST', False):
+    if strtobool(os.getenv('DISABLE_W3ID_LOGIN_FOR_LOCALHOST', '0')):
         return AllowAll(use_login='localhost')
     else:
         with open(config, 'r') as config_file:
