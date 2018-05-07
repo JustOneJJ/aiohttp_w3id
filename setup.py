@@ -31,7 +31,7 @@ def read(fname):
 
 setup(
     name='aiohttp_w3id',
-    version='0.1.0',
+    version='0.1.1',
     author='Justinas V. Daugmaudis',
     author_email='justinas@lt.ibm.com',
     description='w3id authentication middleware plugin for aiohttp',
@@ -40,7 +40,7 @@ setup(
     license='Apache-2.0',
     packages=['w3id', 'w3id.oauth2'],
     platforms=['any'],
-    install_requires = ['pyjwt', 'python-dateutil', 'aiohttp', 'aiohttp_session'],
+    install_requires = ['cryptography', 'pyjwt', 'python-dateutil', 'aiohttp', 'aiohttp_session'],
     classifiers = [
         'Development Status :: 4 - Beta',
         'Programming Language :: Python :: 3',
